@@ -44,7 +44,7 @@ func (s *Supervisor) Start() error {
 		return fmt.Errorf("failed to start child process: %v", err)
 	}
 
-	// Propegate all signals to the child process
+	// Propagate all signals to the child process
 	s.sigCh = make(chan os.Signal, 1)
 	signal.Notify(s.sigCh)
 
