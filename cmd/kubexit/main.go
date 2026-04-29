@@ -199,7 +199,7 @@ func waitForBirthDeps(birthDeps []string, namespace, podName string, timeout tim
 	return nil
 }
 
-// withCancelOnSignal calls cancel when one of the specified signals is recieved.
+// withCancelOnSignal calls cancel when one of the specified signals is received.
 func withCancelOnSignal(ctx context.Context, signals ...os.Signal) context.Context {
 	ctx, cancel := context.WithCancel(ctx)
 
