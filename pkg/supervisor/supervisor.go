@@ -64,7 +64,7 @@ func (s *Supervisor) Start() error {
 			}
 			err := s.cmd.Process.Signal(sig)
 			if err != nil {
-				log.Printf("Signal propegation failed: %v\n", err)
+				log.Printf("Signal propagation failed: %v\n", err)
 			}
 		}
 	}()
