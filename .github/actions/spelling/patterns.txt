@@ -1,5 +1,27 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
+# Automatically suggested patterns
+
+# hit-count: 40 file-count: 4
+# golang print-f-style functions
+(?i)(?<=append|comma|debug|equal|err|error|exit|fatal|format|info|log|name|panic|print|skip|scan|string|trace|true|warn|warning|wrap|write)(?:f|ln)(?:[ (]|$)
+
+# hit-count: 13 file-count: 6
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
+
+# hit-count: 7 file-count: 4
+# container images
+image: [-\w./:@]+
+
+# hit-count: 7 file-count: 2
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 2 file-count: 1
+# GitHub actions
+\buses:\s+(['"]?)[-\w.]+/[-\w./]+@[-\w.]+\g{-1}
+
 # Questionably acceptable forms of `in to`
 # Personally, I prefer `log into`, but people object
 # https://www.tprteaching.com/log-into-log-in-to-login/
