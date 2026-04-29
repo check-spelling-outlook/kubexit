@@ -1,6 +1,6 @@
 # CloudSQL Proxy Sidecar
 
-One reason to use `kubexit` is that Kuberntes Jobs continue to run as long as any of the containers are running.
+One reason to use `kubexit` is that Kubernetes Jobs continue to run as long as any of the containers are running.
 
 If you've ever tried to use [cloudsql-proxy](https://github.com/GoogleCloudPlatform/cloudsql-proxy) as a sidecar in a Kubernetes Job, you may be familiar with these problems:
 1. Jobs are only complete when all the containers in the pod have exited. Long-running sidecars need to exit gracefully when a short-running container exits, otherwise the Job pod will stay running forever.
