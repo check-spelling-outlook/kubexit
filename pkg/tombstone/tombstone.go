@@ -133,7 +133,7 @@ func LoggingEventHandler(event fsnotify.Event) {
 	}
 }
 
-// Watch a graveyard and call the eventHandler (asyncronously) when an
+// Watch a graveyard and call the eventHandler (asynchronously) when an
 // event happens. When the supplied context is canceled, watching will stop.
 func Watch(ctx context.Context, graveyard string, eventHandler EventHandler) error {
 	watcher, err := fsnotify.NewWatcher()

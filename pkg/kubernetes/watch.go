@@ -19,7 +19,7 @@ import (
 
 type EventHandler func(watch.Event)
 
-// Watch a pod and call the eventHandler (asyncronously) when an
+// Watch a pod and call the eventHandler (asynchronously) when an
 // event happens. When the supplied context is canceled, watching will stop.
 func WatchPod(ctx context.Context, namespace, podName string, eventHandler EventHandler) error {
 	config, err := rest.InClusterConfig()
