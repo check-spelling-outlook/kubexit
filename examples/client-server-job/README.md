@@ -1,4 +1,4 @@
-# Example: Clinet Server Job
+# Example: Client Server Job
 
 This example has 3 containers:
 - `kubexit` - An init container that builds kubexit and stores it in an ephemeral volume for the other containers to use.
