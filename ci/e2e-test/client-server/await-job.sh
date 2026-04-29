@@ -27,7 +27,7 @@ echo "Container Logs:"
 kubectl logs --selector=job-name=client-server-job --all-containers --tail=-1
 
 echo
-echo "Pod Respurces:"
+echo "Pod Resources:"
 kubectl get pods --selector=job-name=client-server-job -o json | jq '.items[].status'
 
 echo "Status: ${job_status}"
