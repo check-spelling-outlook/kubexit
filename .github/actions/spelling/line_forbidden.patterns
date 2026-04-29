@@ -368,7 +368,7 @@
 
 # Often should be `if`/`when` (or reworded)
 # unless describing exceptional cases (i.e. emergencies)
-(?<!just )\bin case\b(?! (?:I|s?he|they|of|we|you))
+#(?<!just )\bin case\b(?! (?:I|s?he|they|of|we|you))
 
 # Should be `in`
 (?<=\b(?:go|reach) back )into(?= time\b)
