@@ -39,7 +39,7 @@ Unlike death dependencies, birth dependencies only work within a Kubernetes pod,
 
 Kubexit will block the execution of the dependent container process (ex: a stateless webapp) until the dependency container (ex: a sidecar proxy) is ready.
 
-The primary use case for this feature is Kubernetes sidecar proxies, where the proxy needs to come up before the primary container process, otherwise the primary process egress calls will fail unitl the proxy is up.
+The primary use case for this feature is Kubernetes sidecar proxies, where the proxy needs to come up before the primary container process; otherwise, the primary process egress calls will fail unitl the proxy is up.
 
 ## Death Dependencies
 
@@ -47,7 +47,7 @@ With kubexit, you can define death dependencies between processes that are wrapp
 
 If the dependency process (ex: a stateless webapp) exits before the dependent process (ex: a sidecar proxy), kubexit will detect the tombstone update (`Died: <timestamp>`) and send the `TERM` signal to the dependent process.
 
-The primary use case for this feature is Kubernetes Jobs, where a sidecar container needs to be gracefully shutdown when the primary container exits, otherwise the Job will never complete.
+The primary use case for this feature is Kubernetes Jobs, where a sidecar container needs to be gracefully shutdown when the primary container exits; otherwise, the Job will never complete.
 
 ## Config
 
