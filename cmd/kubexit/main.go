@@ -257,7 +257,7 @@ func fatalf(child *supervisor.Supervisor, ts *tombstone.Tombstone, msg string, a
 	}
 
 	// Wait for shutdown...
-	//TODO: timout in case the process is zombie?
+	//TODO: timeout in case the process is zombie?
 	code := waitForChildExit(child)
 
 	// Attempt to record death, if possible.
